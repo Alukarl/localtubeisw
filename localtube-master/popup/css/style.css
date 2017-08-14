@@ -1,0 +1,51 @@
+body{
+	width: 250px;
+	font-family: Noto Sans, Arial, sans-serif;
+	color: rgb(48, 57, 66);	
+}
+
+.hide{
+	display: none;
+}
+
+
+.flex{
+	display: flex;
+}
+.column{
+	flex-direction: column;
+}
+.row{
+	flex-direction: row;
+}
+
+.spinner{
+	width: 35px;
+	position: static;
+}
+.toolbox{
+	padding-top: 0;
+	padding-bottom: 0;
+
+}
+
+.show{
+	width: 50px;
+}
+
+.row{
+	display: flex;
+	flex-direction: row;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.between{
+	justify-content: space-between;
+}
+
+.btnShowD{
+	
+}

@@ -1,0 +1,48 @@
+{
+
+  "manifest_version": 2,
+  "name": "LocalTube",
+  "version": "1.1",
+
+  "description": "Download youtube videos",
+  "icons": {
+    "48": "icons/download-48.png"
+  },
+
+"content_security_policy": "script-src 'self' https://www.googleapis.com blob: filesystem: chrome-extension-resource: ;object-src 'self'",
+
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage",
+    "tabs",
+    "*://developer.mozilla.org/*",
+    "webRequest",
+    "https://www.googleapis.com/*",
+    "http://ajax.googleapis.com/",
+    "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+  ],
+
+  "background": {
+    "scripts": [
+      "popup/js/download.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": {
+     "32" : "icons/download-32.png"
+    },
+    "default_title": "LocalTube",
+    "default_popup": "popup/view.html"
+  },
+  "content_scripts": [
+    {
+     "matches": ["http://*/*", "https://*/*"],
+      "js": ["popup/js/jquery-3.2.1.min.js", "popup/js/download.js"]
+    }
+  ]
+
+}
+
+ 
